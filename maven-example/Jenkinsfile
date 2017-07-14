@@ -1,9 +1,6 @@
 node {
-    def server = '52.221.169.124'
-    def rtMaven = Artifactory.newMavenBuild()
-
     stage 'Build'
-        git url: 'https://github.com/jfrogdev/project-examples.git'
+        git url: 'https://github.com/jsureshsg/maventest.git'
 
     stage 'Artifactory configuration'
         rtMaven.tool = $M2 // Tool name from Jenkins configuration
